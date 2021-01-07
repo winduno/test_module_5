@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Tạo mới sách</h1>
+  <h1>Cập nhật sách</h1>
   <form (ngSubmit)="updateBook(id)">
     <table>
       <tr>
@@ -12,7 +12,7 @@
       </tr>
       <tr>
         <td>Description:</td>
-        <td><input type="text" name="description" [(ngModel)]="book.description"></td>
+        <td><textarea id="des" class="h-auto" cols="100" rows="10" name="description" [(ngModel)]="book.description"></textarea></td>
       </tr>
       <tr>
         <td></td>
