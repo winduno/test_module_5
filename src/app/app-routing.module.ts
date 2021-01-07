@@ -8,11 +8,12 @@ import {UpdateBooksComponent} from './books/update-books/update-books.component'
 import {NotfoundComponent} from './notfound/notfound.component';
 
 const routes: Routes = [
+  {path: '', component: ListBooksComponent},
   {path: 'add-book', component: AddBooksComponent},
-  {path: 'delete-book', component: DeleteBooksComponent},
+  {path: 'delete-book/:id', component: DeleteBooksComponent},
   {path: 'detail-book', component: DetailBooksComponent},
   {path: 'list-book', component: ListBooksComponent},
-  {path: 'update-book', component: UpdateBooksComponent},
+  {path: 'update-book/:id', component: UpdateBooksComponent},
   {path: '**', component: NotfoundComponent}
 ];
 

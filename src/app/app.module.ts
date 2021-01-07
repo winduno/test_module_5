@@ -9,6 +9,8 @@ import { UpdateBooksComponent } from './books/update-books/update-books.componen
 import { DetailBooksComponent } from './books/detail-books/detail-books.component';
 import { DeleteBooksComponent } from './books/delete-books/delete-books.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,10 +22,12 @@ import { NotfoundComponent } from './notfound/notfound.component';
     DeleteBooksComponent,
     NotfoundComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

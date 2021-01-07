@@ -1,1 +1,36 @@
-<p>list-books works!</p>
+
+<div class="container">
+  <h1>Danh sách các cuốn sách</h1>
+  <br>
+  <p class="float-left">Có {{count}} quyển sách</p>
+    <a [routerLink]="['/add-book']">
+      <button class="btn btn-success float-right">Thêm sách mới</button>
+    </a>
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let book of bookList">
+        <tr>
+          <th scope="row">{{book.id}}</th>
+          <td>{{book.title}}</td>
+          <td>{{book.description}}</td>
+          <td>
+            <a [routerLink]="['/update-book', book.id]">
+              <button class="btn btn-success">Sửa</button>
+            </a><a [routerLink]="['/delete-book', book.id]">
+              <button class="btn btn-danger">Xóa</button>
+            </a></td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
+
