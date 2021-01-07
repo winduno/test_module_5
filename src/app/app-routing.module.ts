@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: '', component: ListBooksComponent},
   {path: 'add-book', component: AddBooksComponent},
   {path: 'delete-book/:id', component: DeleteBooksComponent},
-  {path: 'detail-book', component: DetailBooksComponent},
+  {path: 'detail-book/:id', component: DetailBooksComponent},
   {path: 'list-book', component: ListBooksComponent},
   {path: 'update-book/:id', component: UpdateBooksComponent},
   {path: '**', component: NotfoundComponent}

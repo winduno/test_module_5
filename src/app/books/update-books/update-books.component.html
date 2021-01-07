@@ -1,1 +1,26 @@
-<p>update-books works!</p>
+<div class="container">
+  <h1>Tạo mới sách</h1>
+  <form (ngSubmit)="updateBook(id)">
+    <table>
+      <tr>
+        <td>Title:</td>
+        <td><input type="text" name="title" [(ngModel)]="book.title"></td>
+      </tr>
+      <tr>
+        <td>Author:</td>
+        <td><input type="text" name="author" [(ngModel)]="book.author"></td>
+      </tr>
+      <tr>
+        <td>Description:</td>
+        <td><input type="text" name="description" [(ngModel)]="book.description"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button class="btn btn-success">Submit</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <p *ngIf="message != ''" class="text-success">{{message}}</p>
+</div>

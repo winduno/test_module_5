@@ -20,7 +20,7 @@
       <ng-container *ngFor="let book of bookList">
         <tr>
           <th scope="row">{{book.id}}</th>
-          <td>{{book.title}}</td>
+          <td><a [routerLink]="['/detail-book',book.id]">{{book.title}}</a></td>
           <td>{{book.description}}</td>
           <td>
             <a [routerLink]="['/update-book', book.id]">
