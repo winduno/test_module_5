@@ -1,10 +1,10 @@
 <div class="container">
   <h1>Cập nhật sách</h1>
-  <form (ngSubmit)="updateBook(id)">
+  <form #editForm="ngForm" (ngSubmit)="updateBook(id)">
     <table>
       <tr>
         <td>Title:</td>
-        <td><input type="text" name="title" [(ngModel)]="book.title"></td>
+        <td><input type="text" name="title" required [(ngModel)]="book.title"></td>
       </tr>
       <tr>
         <td>Author:</td>
@@ -17,7 +17,7 @@
       <tr>
         <td></td>
         <td>
-          <button class="btn btn-success">Cập nhật</button> &nbsp;
+          <button class="btn btn-success" [disabled]="!editForm.form.valid">Cập nhật</button> &nbsp;
           <a [routerLink]="['']"><button class="btn btn-warning">Thoát</button></a>
         </td>
       </tr>
