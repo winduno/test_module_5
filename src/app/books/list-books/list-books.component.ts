@@ -9,7 +9,7 @@ import {Book} from '../../model/book';
 })
 export class ListBooksComponent implements OnInit {
   bookList: Book[] = [];
-  count = this.bookList.length;
+  count: 0;
 
   constructor(private bookService: BookServiceService) {
   }
@@ -21,6 +21,7 @@ export class ListBooksComponent implements OnInit {
   getBooks() {
     this.bookService.getAllBook().subscribe(result => {
       this.bookList = result;
+      this.count = result.length;
     }, error => console.log(error));
   }
 }
