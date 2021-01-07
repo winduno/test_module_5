@@ -1,7 +1,21 @@
 <div class="container">
   <br>
-  <h3 class="float-left">Chi tiết sách</h3>
-  <a [routerLink]="['']">
-    <button class="btn btn-success float-right">Về trang danh sách</button>
-  </a>
+  <div>
+    <h3 class="float-left">Chi tiết sách</h3>
+    <a [routerLink]="['']">
+      <button class="btn btn-success float-right">Về trang danh sách</button>
+    </a>
+  </div>
+  <br><br><br>
+  <form>
+    <label>Tên sách: &nbsp;</label>
+    <label>{{book.title}}</label><br><br>
+    <label>Tác giả: &nbsp;</label>
+    <label>{{book.author}}</label><br><br>
+    <label>Mô tả: </label><br>
+    <label>{{book.description}}</label>
+  </form>
+
 </div>
+
+

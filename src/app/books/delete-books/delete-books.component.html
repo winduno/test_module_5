@@ -1,1 +1,25 @@
-<p>delete-books works!</p>
+<div class="container">
+  <br>
+  <div>
+    <h3 class="float-left">Xóa sách</h3>
+  </div>
+  <br><br><br>
+  <form>
+    <label>Tên sách: &nbsp;</label>
+    <label>{{book.title}}</label><br><br>
+    <label>Tác giả: &nbsp;</label>
+    <label>{{book.author}}</label><br><br>
+    <label>Mô tả: </label><br>
+    <label>{{book.description}}</label>
+  </form>
+
+  <a [routerLink]="['']">
+    <button class="btn btn-danger" (click)="deleteBook(id)">Xóa sách</button>
+  </a>
+  &nbsp;
+  <a [routerLink]="['']">
+    <button class="btn btn-warning">Thoát</button>
+  </a>
+</div>
+
+
